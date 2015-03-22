@@ -6,7 +6,7 @@
 
 # Import necessary libraries
 import config
-from lib import menu
+from libs import menu
 
 cursor = config.createCursor()
 
