@@ -5,9 +5,9 @@
 import mysql.connector
 
 MySQLConfig = {
-  'user': '',
-  'password': '',
-  'host': '',
+  'user': 'brandon',
+  'password': 'brandon123',
+  'host': 'localhost',
   'database': 'NBA',
   'raise_on_warnings': True,
 }
@@ -16,8 +16,7 @@ MySQLConfig = {
 cnx = mysql.connector.connect(**MySQLConfig)
 
 def createCursor():
-    cursor = cnx.cursor()
-    return cursor
+    return cnx.cursor()
 
 cursor = createCursor()
 
