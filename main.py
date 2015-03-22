@@ -6,42 +6,45 @@
 
 # Import necessary libraries
 import config
+from lib import menu
 
 cursor = config.createCursor()
 
 indicator = True
-inputs = ["1", "2", "3", "4", "5", "6", "7"]
+inputs = [1, 2, 3, 4, 5, 6, 7]
 
 # Start menu for operations
-print("Welcome to the NBADatabase")
-print("\t 1 - NBADatabase Information")
-print("\t 2 - View Teams")
-print("\t 3 - View Players")
-print("\t 4 - Team Options")
-print("\t 5 - Player Options")
-print("\t 6 - Season Options")
-print("\t 7 - Search Options")
-print("\t 0 - Exit Program")
+print("Welcome to the NBADatabase \n")
+menu.printMenu()
 
 # While loop for menu and getting user input
 while indicator:
 
-    operation = input("Select an operation: ")
+    operation = input("\n Select an operation: ")
 
-    if operation == "0":
-        print(" \n Program Exiting!")
+    if operation == 0:
+        print(" \n Program Exiting! \n")
         indicator = False
-    else:
-        for check in inputs:
-            if check != operation:
-                print(" \n Invalid Input! \n")
-                break
+        break
 
-        print("\t 1 - NBADatabase Information")
-        print("\t 2 - View Teams")
-        print("\t 3 - View Players")
-        print("\t 4 - Team Options")
-        print("\t 5 - Player Options")
-        print("\t 6 - Season Options")
-        print("\t 7 - Search Options")
-        print("\t 0 - Exit Program")
+    else:
+        if operation not in inputs:
+            print("\n Invalid Operation! \n")
+
+        # Flow for operations in the program
+        if operation == 1:
+            print("Operaton 1")
+        elif operation ==2:
+            print("Operaton 2")
+        elif operation ==3:
+            print("Operaton 3")
+        elif operation ==4:
+            print("Operaton 4")
+        elif operation ==5:
+            print("Operaton 5")
+        elif operation ==6:
+            print("Operaton 6")
+        elif operation ==7:
+            print("Operaton 7")
+
+        menu.printMenu()
