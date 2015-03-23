@@ -6,7 +6,7 @@
 
 # Import necessary libraries
 import config
-from libs import menu, db_info, view_team, view_player
+from libs import menu, db_info, view_team, view_player, teams
 
 cursor = config.createCursor()
 
@@ -39,7 +39,14 @@ while indicator:
         elif operation ==3:
             view_player.showPlayers(cursor)
         elif operation ==4:
-            print("Operaton 4")
+            teams.printMenu()
+            operation = input("\nSelect a team operation: ")
+            if operation == 1:
+                teams.insertTeam(cursor)
+            elif operation == 2:
+                teams.removeTeam(cursor)
+            elif operation == 3:
+                teams.editTeam(cursor)
         elif operation ==5:
             print("Operaton 5")
         elif operation ==6:
