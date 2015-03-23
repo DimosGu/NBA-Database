@@ -6,7 +6,7 @@
 
 # Import necessary libraries
 import config
-from libs import menu, db_info, view_team
+from libs import menu, db_info, view_team, view_player
 
 cursor = config.createCursor()
 
@@ -37,7 +37,7 @@ while indicator:
         elif operation ==2:
             view_team.showTeams(cursor)
         elif operation ==3:
-            print("Operaton 3")
+            view_player.showPlayers(cursor)
         elif operation ==4:
             print("Operaton 4")
         elif operation ==5:

@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 
-# Option to view the teams in database
+# Option to view the players in database
 import sys
 
-def showTeams(cursor):
+def showPlayers(cursor):
 
-    attList = ["Team ID", "Team name", "General Manager", "Coach", "Arena", "Record"]
+    attList = ["Player ID", "Player name", "Draft Year"]
     # List all of the teams and the data
     test = 'SELECT * ' \
-           ' FROM Team'
+           ' FROM Player'
 
     cursor.execute(test)
 
@@ -19,7 +19,7 @@ def showTeams(cursor):
 
     print
     for testing in cursor:
-        print("-"*136)
+        print("-"*67)
         for att in testing:
             print("{0:<20} |".format(att)),
         print
