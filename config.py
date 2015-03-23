@@ -18,8 +18,6 @@ cnx = mysql.connector.connect(**MySQLConfig)
 def createCursor():
     return cnx.cursor()
 
-cursor = createCursor()
-
 # Example query with cursor
 # query = 'SHOW tables'
 # cursor.execute(query)

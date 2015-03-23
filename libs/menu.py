@@ -2,6 +2,7 @@
 
 # Menu For Program
 def printMenu():
+    print("\t Options List:")
     print("\t 1 - NBADatabase Information")
     print("\t 2 - View Teams")
     print("\t 3 - View Players")

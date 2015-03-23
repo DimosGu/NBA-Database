@@ -6,7 +6,7 @@
 
 # Import necessary libraries
 import config
-from libs import menu
+from libs import menu, db_info
 
 cursor = config.createCursor()
 
@@ -33,7 +33,7 @@ while indicator:
 
         # Flow for operations in the program
         if operation == 1:
-            print("Operaton 1")
+            db_info.showInformation(cursor)
         elif operation ==2:
             print("Operaton 2")
         elif operation ==3:
