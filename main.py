@@ -2,12 +2,11 @@
 
 # CP363 Final Assignment #
 # NBA Database #
-# Python 2.7.6 #
-# Brandon Chow - 129006542 and Tudor Bertian - 130318270 #
+# Brandon Chow - 129006542 and Tudor Bertiean - 130318270 #
 
 # Import necessary libraries
 import config
-from libs import menu, db_info
+from libs import menu, db_info, view_team
 
 cursor = config.createCursor()
 
@@ -36,7 +35,7 @@ while indicator:
         if operation == 1:
             db_info.showInformation(cursor)
         elif operation ==2:
-            print("Operaton 2")
+            view_team.showTeams(cursor)
         elif operation ==3:
             print("Operaton 3")
         elif operation ==4:
