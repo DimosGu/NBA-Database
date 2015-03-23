@@ -20,7 +20,7 @@ menu.printMenu()
 # While loop for menu and getting user input
 while indicator:
 
-    operation = input("\n Select an operation: ")
+    operation = input("\nSelect an operation: ")
 
     if operation == 0:
         print(" \n Program Exiting! \n")

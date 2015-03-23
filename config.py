@@ -5,9 +5,9 @@
 import mysql.connector
 
 MySQLConfig = {
-  'user': '',
-  'password': '',
-  'host': '',
+  'user': 'brandon',
+  'password': 'brandon123',
+  'host': 'personal.branchow.com',
   'database': 'NBA',
   'raise_on_warnings': True,
 }
