@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # Option to view the players in database
-import sys
+
 
 def showPlayers(cursor):
 

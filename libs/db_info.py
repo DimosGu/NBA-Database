@@ -2,7 +2,13 @@
 
 # NBA Database Information
 # Shows the general information of the database
-def showInformation(cursor):
+
+import MySQLHelper
+mysql_helper = MySQLHelper.MySQLHelper()
+cursor = mysql_helper.cursor
+
+
+def show_information():
 
     # MySQL Version
     version = 'SELECT VERSION()'

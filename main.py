@@ -5,10 +5,7 @@
 # Brandon Chow - 129006542 and Tudor Bertiean - 130318270 #
 
 # Import necessary libraries
-import config
 from libs import menu, db_info, view_team, view_player, teams
-
-cursor = config.createCursor()
 
 indicator = True
 inputs = [1, 2, 3, 4, 5, 6, 7]
@@ -33,25 +30,18 @@ while indicator:
 
         # Flow for operations in the program
         if operation == 1:
-            db_info.showInformation(cursor)
-        elif operation ==2:
+            db_info.show_information()
+        elif operation == 2:
             view_team.showTeams(cursor)
-        elif operation ==3:
+        elif operation == 3:
             view_player.showPlayers(cursor)
-        elif operation ==4:
-            teams.printMenu()
-            operation = input("\nSelect a team operation: ")
-            if operation == 1:
-                teams.insertTeam(cursor)
-            elif operation == 2:
-                teams.removeTeam(cursor)
-            elif operation == 3:
-                teams.editTeam(cursor)
-        elif operation ==5:
-            print("Operaton 5")
-        elif operation ==6:
-            print("Operaton 6")
-        elif operation ==7:
-            print("Operaton 7")
+        elif operation == 4:
+            print("Operation 4")
+        elif operation == 5:
+            print("Operation 5")
+        elif operation == 6:
+            print("Operation 6")
+        elif operation == 7:
+            print("Operation 7")
 
         menu.printMenu()
