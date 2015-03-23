@@ -2,6 +2,7 @@
 
 # CP363 Final Assignment #
 # NBA Database #
+# Python 2.7.6 #
 # Brandon Chow - 129006542 and Tudor Bertian - 130318270 #
 
 # Import necessary libraries
