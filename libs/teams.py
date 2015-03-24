@@ -63,10 +63,6 @@ def remove_team():
     cursor = mysql_helper.cursor
 
     team = raw_input("\nEnter the team name you want to delete: ")
-
     test = "DELETE FROM Team WHERE team_name LIKE %s", ("%" + team + "%",)
     mysql_helper.insert_data(test)
-
-    test = "DELETE FROM Team WHERE team_name = '%s'", team
-
 
