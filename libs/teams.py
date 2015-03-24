@@ -59,6 +59,6 @@ def insert_team():
 
 def remove_team():
     team = raw_input("\nEnter the team name you want to delete: ")
-    test = "DELETE FROM Team WHERE team_id='%d;" % team
+    test = "DELETE FROM Team WHERE team_name='%s'", team
 
     mysql_helper.insert_data(test)
