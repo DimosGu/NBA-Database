@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 
 # Option to view the players in database
+import MySQLHelper
+mysql_helper = MySQLHelper.MySQLHelper()
+cursor = mysql_helper.cursor
 
 
-def showPlayers(cursor):
+def show_players():
 
     attList = ["Player ID", "Player name", "Draft Year"]
     # List all of the teams and the data
@@ -12,16 +15,16 @@ def showPlayers(cursor):
 
     cursor.execute(test)
 
-    print
+    print("")
 
     for att in attList:
         print("{0:<20s} |".format(att)),
 
-    print
+    print("")
     for testing in cursor:
         print("-"*67)
         for att in testing:
             print("{0:<20} |".format(att)),
-        print
+        print("")
 
-    print
+    print("")

@@ -47,6 +47,3 @@ def show_information():
 
     # Line Spacing
     print("")
-
-    # for testing in cursor:
-    #     print("Testing: {0}".format(testing))

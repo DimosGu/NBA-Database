@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 
 # Option to view the teams in database
-import sys
+import MySQLHelper
+mysql_helper = MySQLHelper.MySQLHelper()
+cursor = mysql_helper.cursor
 
-def showTeams(cursor):
+
+def show_teams():
 
     attList = ["Team ID", "Team name", "General Manager", "Coach", "Arena", "Record"]
     # List all of the teams and the data
@@ -12,16 +15,16 @@ def showTeams(cursor):
 
     cursor.execute(test)
 
-    print
+    print("")
 
     for att in attList:
         print("{0:<20s} |".format(att)),
 
-    print
+    print("")
     for testing in cursor:
         print("-"*136)
         for att in testing:
             print("{0:<20} |".format(att)),
-        print
+        print("")
 
-    print
+    print("")

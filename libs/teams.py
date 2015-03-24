@@ -1,8 +1,12 @@
 #!/usr/bin/env python
 
 # Team options for the database #
+import MySQLHelper
+mysql_helper = MySQLHelper.MySQLHelper()
+cursor = mysql_helper.cursor
 
-def printMenu():
+
+def print_menu():
     print("\t Team Options List:")
     print("\t 1 - Insert Team")
     print("\t 2 - Remove Team")

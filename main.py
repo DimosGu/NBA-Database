@@ -32,9 +32,9 @@ while indicator:
         if operation == 1:
             db_info.show_information()
         elif operation == 2:
-            view_team.showTeams(cursor)
+            view_team.show_teams()
         elif operation == 3:
-            view_player.showPlayers(cursor)
+            view_player.show_players()
         elif operation == 4:
             print("Operation 4")
         elif operation == 5:
