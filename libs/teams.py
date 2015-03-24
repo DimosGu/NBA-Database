@@ -2,6 +2,7 @@
 
 # Team options for the database #
 import MySQLHelper
+mysql_helper = MySQLHelper.MySQLHelper()
 
 def team_options():
 
@@ -44,8 +45,6 @@ def print_menu():
 
 
 def insert_team():
-    mysql_helper = MySQLHelper.MySQLHelper()
-    cursor = mysql_helper.cursor
 
     print("INSERT TEAM HERE")
     name = raw_input("\nEnter team name: ")
@@ -59,17 +58,15 @@ def insert_team():
            'VALUES (%s, %s, %s, %s, %s)', (arena, coach, gm, record, name)
     mysql_helper.insert_data(test)
 
+# Function for removing a team from the NBA
 def remove_team():
-    mysql_helper = MySQLHelper.MySQLHelper()
-    cursor = mysql_helper.cursor
 
     team = raw_input("\nEnter the team name you want to delete: ")
     test = "DELETE FROM Team WHERE team_name LIKE %s", ("%" + team + "%",)
     mysql_helper.insert_data(test)
 
+# Function for editing the team
 def edit_team():
-    mysql_helper = MySQLHelper.MySQLHelper()
-    cursor = mysql_helper.cursor
 
     team = raw_input("\n Enter team name to change attribute for: ")
     print("Which of these attributes:")

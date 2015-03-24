@@ -8,7 +8,7 @@ cursor = mysql_helper.cursor
 
 def show_players():
 
-    attList = ["Player ID", "Player name", "Draft Year"]
+    attList = ["Player ID", "Player Name", "Draft Year"]
     # List all of the teams and the data
     test = 'SELECT * ' \
            ' FROM Player'

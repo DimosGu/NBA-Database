@@ -6,10 +6,11 @@ import MySQLHelper
 mysql_helper = MySQLHelper.MySQLHelper()
 cursor = mysql_helper.cursor
 
-teamList = ["Team ID", "Team name", "General Manager", "Coach", "Arena", "Record"]
-playerList = ["Player ID", "Player name", "Draft Year"]
+teamList = ["Team ID", "Team Name", "General Manager", "Coach", "Arena", "Record"]
+playerList = ["Player ID", "Player Name", "Draft Year"]
 gameList = ["Game ID", "Referees", "Location", "Winner", "Score"]
 
+# Search functions to look for specific attributes
 def nba_search():
 
     print_menu()
@@ -35,6 +36,7 @@ def nba_search():
                 cursor.execute(*team_query)
                 results = cursor.fetchall()
 
+                # Out put formatted results
                 print("Search Results")
                 print("")
                 if results:
@@ -63,6 +65,7 @@ def nba_search():
                 cursor.execute(*team_query)
                 results = cursor.fetchall()
 
+                # Out put formatted results
                 print("Search Results")
                 print("")
                 if results:
@@ -91,6 +94,7 @@ def nba_search():
                 cursor.execute(*team_query)
                 results = cursor.fetchall()
 
+                # Out put formatted results
                 print("Search Results")
                 print("")
                 if results:
