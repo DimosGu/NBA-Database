@@ -36,10 +36,21 @@ def nba_search():
                 results = cursor.fetchall()
 
                 print("Search Results")
+                print("")
                 if results:
+                    for att in teamList:
+                        print("{0:<20s} |".format(att)),
+
                     # Print out all the results if they exist
-                    for x in results:
-                        print(x)
+                    print("")
+                    for testing in results:
+                        print("-"*136)
+                        for att in testing:
+                            print("{0:<20} |".format(att)),
+                        print("")
+
+                    print("")
+
                 else:
                     print("No teams with that name were found!")
 
@@ -53,10 +64,21 @@ def nba_search():
                 results = cursor.fetchall()
 
                 print("Search Results")
+                print("")
                 if results:
+                    for att in playerList:
+                        print("{0:<20s} |".format(att)),
+
                     # Print out all the results if they exist
-                    for x in results:
-                        print(x)
+                    print("")
+                    for testing in results:
+                        print("-"*67)
+                        for att in testing:
+                            print("{0:<20} |".format(att)),
+                        print("")
+
+                    print("")
+
                 else:
                     print("No players with that name were found!")
 
@@ -70,10 +92,20 @@ def nba_search():
                 results = cursor.fetchall()
 
                 print("Search Results")
+                print("")
                 if results:
+                    for att in gameList:
+                        print("{0:<20s} |".format(att)),
+
                     # Print out all the results if they exist
-                    for x in results:
-                        print(x)
+                    print("")
+                    for testing in results:
+                        print("-"*113)
+                        for att in testing:
+                            print("{0:<20} |".format(att)),
+                        print("")
+
+                    print("")
                 else:
                     print("No games with that location were found!")
 
