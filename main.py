@@ -5,8 +5,9 @@
 # Brandon Chow - 129006542 and Tudor Bertiean - 130318270 #
 
 # Import necessary libraries
-from libs import menu, db_info, view_team, view_player, teams
+from libs import menu, db_info, view_team, view_player, teams, MySQLHelper, players
 
+mysql_helper = MySQLHelper.MySQLHelper()
 indicator = True
 inputs = [1, 2, 3, 4, 5, 6, 7]
 
@@ -38,10 +39,12 @@ while indicator:
         elif operation == 4:
             teams.team_options()
         elif operation == 5:
-            print("Operation 5")
+            players.player_options()
         elif operation == 6:
             print("Operation 6")
         elif operation == 7:
             print("Operation 7")
 
         menu.printMenu()
+
+    #mysql_helper.close_connection()
