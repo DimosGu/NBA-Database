@@ -31,8 +31,7 @@ def nba_search():
             if operation == 1:
                 print("Search For A Team")
                 team_name = raw_input("\nName To Search: ")
-
-                team_query = 'SELECT * FROM Team WHERE team_name = %s', (team_name,)
+                team_query = 'SELECT * FROM Team WHERE team_name = "%s"', (team_name,)
                 cursor.execute(*team_query)
                 results = cursor.fetchall()
 

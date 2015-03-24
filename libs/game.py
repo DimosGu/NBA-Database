@@ -17,8 +17,8 @@ def add_game():
     points = raw_input("Points: ")
 
     # Insert statement into the database
-    game_query = 'INSERT INTO Team (player_id, game_id, field_goal_percentage, turnovers, steals, rebounds, assists, points) ' \
+    game_query = 'INSERT INTO Statistics (player_id, game_id, field_goal_percentage, turnovers, steals, rebounds, assists, points) ' \
                  'VALUES (%s, %s, %s, %s, %s, %s, %s, %s)', \
                  (player_id, game_id, fgp, turnovers, steals, rebounds, assists, points)
     mysql_helper.insert_data(game_query)
-    print("Game Has Been Inputted!")
+    print("Statistics Have Been Inputted!\n")
