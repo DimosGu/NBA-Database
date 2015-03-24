@@ -11,5 +11,4 @@ Operations
 - Add Player Stats From Game
 - Search For A Team
 - Search For A Player
-    - Player highlight
 - Search For A Game
