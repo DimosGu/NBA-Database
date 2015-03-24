@@ -30,8 +30,10 @@ def nba_search():
             # Search for a team by name
             if operation == 1:
                 print("Search For A Team")
-                team_name = raw_input("\nName To Search: ")
-                team_query = 'SELECT * FROM Team WHERE team_name = "%s"', (team_name,)
+                criteria = raw_input("\nSearch For A Team By (Name, Manager, Coach, Arena): ")
+                # Find a team that matches any of the desired criteria
+                team_query = 'SELECT * FROM Team WHERE team_name = %s OR general_manager = %s OR coach = %s OR arena = %s', \
+                             (criteria, criteria, criteria, criteria)
                 cursor.execute(*team_query)
                 results = cursor.fetchall()
 
