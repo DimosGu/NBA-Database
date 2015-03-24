@@ -9,5 +9,5 @@ def printMenu():
     print("\t 4 - Team Options")
     print("\t 5 - Player Options")
     print("\t 6 - Season Options")
-    print("\t 7 - Search Options")
+    print("\t 7 - Search")
     print("\t 0 - Exit Program")
