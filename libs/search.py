@@ -6,6 +6,9 @@ import MySQLHelper
 mysql_helper = MySQLHelper.MySQLHelper()
 cursor = mysql_helper.cursor
 
+teamList = ["Team ID", "Team name", "General Manager", "Coach", "Arena", "Record"]
+playerList = ["Player ID", "Player name", "Draft Year"]
+gameList = ["Game ID", "Referees", "Location", "Winner", "Score"]
 
 def nba_search():
 
