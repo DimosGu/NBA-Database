@@ -45,7 +45,7 @@ while indicator:
         elif operation == 7:
             print("Operation 7")
         elif operation == 8:
-            print("Operation 7")
+            print("Operation 8")
         elif operation == 9:
             search.nba_search()
 
