@@ -5,11 +5,11 @@
 # Brandon Chow - 129006542 and Tudor Bertiean - 130318270 #
 
 # Import necessary libraries
-from libs import menu, db_info, view_team, view_player, teams, MySQLHelper, players
+from libs import menu, db_info, view_team, view_player, teams, MySQLHelper, players, search
 
 mysql_helper = MySQLHelper.MySQLHelper()
 indicator = True
-inputs = [1, 2, 3, 4, 5, 6, 7]
+inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 # Start menu for operations
 print("Welcome to the NBADatabase \n")
@@ -44,7 +44,9 @@ while indicator:
             print("Operation 6")
         elif operation == 7:
             print("Operation 7")
+        elif operation == 8:
+            print("Operation 7")
+        elif operation == 9:
+            search.nba_search()
 
         menu.printMenu()
-
-    #mysql_helper.close_connection()
