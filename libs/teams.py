@@ -44,7 +44,7 @@ def print_menu():
 
 
 def insert_team():
-    print("INSERT TEAM HERE")
+    print("Enter Team Details:")
     name = raw_input("\nEnter team name: ")
     gm = raw_input("Enter general manager: ")
     coach = raw_input("Enter coach: ")
