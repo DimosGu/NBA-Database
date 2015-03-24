@@ -5,9 +5,9 @@
 
 # MySQL Database Settings
 def get_config():
-    config =  { 'user': '',
-                'password': '',
-                'host': '',
+    config =  { 'user': 'brandon',
+                'password': 'brandon123',
+                'host': 'personal.branchow.com',
                 'database': 'NBA',
                 'raise_on_warnings': True}
     return config
