@@ -1,16 +1,16 @@
 # NBADatabase
 ## CP363 Final Project - NBADatabase
 
-CP363 Database Course final project. Mock NBA database with operations for mainpulating and viewing data.
+CP363 Database Course final project. Mock NBA database with operations for manipulating and viewing data.
 
 Operations
-- View which team belongs to which division
+- View list of all teams
+- View list of all players
+- Add/Remove/Edit Team
 - Add/Remove/Edit Player
-- Edit Player Stat
-- Trade Player
-- Add/Edit Game
-- Edit Leaders
-- Edit Teams
-- Add Season
-- Search Team
-- Search Player
+- Add/Remove/Edit Game
+- Add Player Stats From Game
+- Search For A Team
+- Search For A Player
+    - Player highlight
+- Search For A Game
