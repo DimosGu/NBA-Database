@@ -15,7 +15,7 @@ class MySQLHelper:
     def insert_data(self, query):
         self.cursor.execute(*query)
         self.cnx.commit()
-        self.cnx.close()
+        #self.cnx.close()
 
     def close_connection(self):
         self.cnx.close()

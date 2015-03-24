@@ -65,6 +65,7 @@ def remove_team():
     test = "DELETE FROM Team WHERE team_name LIKE %s", ("%" + team + "%",)
     mysql_helper.insert_data(test)
 
+
 # Function for editing the team
 def edit_team():
 
@@ -84,5 +85,6 @@ def edit_team():
         test = 'UPDATE Team SET team_name = %s WHERE team_name = %s', (change_att, team)
     elif which_att == "general_manager":
         test = 'UPDATE Team SET general_manager = %s WHERE team_name = %s', (change_att, team)
-
+    else:
+        print("You have entered a non-existing team name")
     mysql_helper.insert_data(test)
