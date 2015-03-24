@@ -32,6 +32,7 @@ def nba_search():
                 cursor.execute(*team_query)
                 results = cursor.fetchall()
 
+                print("Search Results")
                 if results:
                     # Print out all the results if they exist
                     for x in results:
@@ -48,6 +49,7 @@ def nba_search():
                 cursor.execute(*team_query)
                 results = cursor.fetchall()
 
+                print("Search Results")
                 if results:
                     # Print out all the results if they exist
                     for x in results:
@@ -64,6 +66,7 @@ def nba_search():
                 cursor.execute(*team_query)
                 results = cursor.fetchall()
 
+                print("Search Results")
                 if results:
                     # Print out all the results if they exist
                     for x in results:
