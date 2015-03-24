@@ -5,7 +5,10 @@
 # Brandon Chow - 129006542 and Tudor Bertiean - 130318270 #
 
 # Import necessary libraries
-from libs import menu, db_info, view_team, view_player, teams, MySQLHelper, players
+
+from libs import menu, db_info, view_team, view_player, teams, MySQLHelper, players, search
+
+
 
 mysql_helper = MySQLHelper.MySQLHelper()
 indicator = True
@@ -43,7 +46,7 @@ while indicator:
         elif operation == 6:
             print("Operation 6")
         elif operation == 7:
-            print("Operation 7")
+            search.nba_search()
 
         menu.printMenu()
 
