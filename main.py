@@ -45,6 +45,6 @@ while indicator:
             game.add_game()
         elif operation == 7:
             search.nba_search()
-
         menu.printMenu()
+
 

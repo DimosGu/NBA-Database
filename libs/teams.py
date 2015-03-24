@@ -27,6 +27,7 @@ def team_options():
                 remove_team()
             elif operation == 3:
                 print("Editing Team...")
+                edit_team()
 
         print_menu()
 
@@ -66,3 +67,25 @@ def remove_team():
     test = "DELETE FROM Team WHERE team_name LIKE %s", ("%" + team + "%",)
     mysql_helper.insert_data(test)
 
+def edit_team():
+    mysql_helper = MySQLHelper.MySQLHelper()
+    cursor = mysql_helper.cursor
+
+    team = raw_input("\n Enter team name to change attribute for: ")
+    print("Which of these attributes:")
+    print("team_name, general_manager, coach, arena, record")
+    which_att = raw_input("Would you like to change: ")
+    change_att = raw_input("Change to: ")
+
+    if which_att == "coach":
+        test = 'UPDATE Team SET coach = %s WHERE team_name = %s', (change_att, team)
+    elif which_att == "arena":
+        test = 'UPDATE Team SET arena = %s WHERE team_name = %s', (change_att, team)
+    elif which_att == "record":
+        test = 'UPDATE Team SET record = %s WHERE team_name = %s', (change_att, team)
+    elif which_att == "team_name":
+        test = 'UPDATE Team SET team_name = %s WHERE team_name = %s', (change_att, team)
+    elif which_att == "general_manager":
+        test = 'UPDATE Team SET general_manager = %s WHERE team_name = %s', (change_att, team)
+
+    mysql_helper.insert_data(test)
