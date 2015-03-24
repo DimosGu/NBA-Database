@@ -36,7 +36,7 @@ while indicator:
         elif operation == 3:
             view_player.show_players()
         elif operation == 4:
-            print("Operation 4")
+            teams.team_options()
         elif operation == 5:
             print("Operation 5")
         elif operation == 6:
