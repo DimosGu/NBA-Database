@@ -2,8 +2,6 @@
 
 # Player options for the database #
 import MySQLHelper
-mysql_helper = MySQLHelper.MySQLHelper()
-cursor = mysql_helper.cursor
 
 def player_options():
 
@@ -25,6 +23,7 @@ def player_options():
                 insert_team()
             elif operation == 2:
                 print("Removing Player...")
+                remove_player()
             elif operation == 3:
                 print("Editing Player...")
 
@@ -43,6 +42,9 @@ def print_menu():
 
 
 def insert_team():
+    mysql_helper = MySQLHelper.MySQLHelper()
+    cursor = mysql_helper.cursor
+
     print("INSERT Player HERE")
     name = raw_input("\nEnter player name: ")
     draft_year = raw_input("Enter draft year: ")
@@ -51,4 +53,12 @@ def insert_team():
     test = 'INSERT INTO Player (draft_year, name) ' \
            'VALUES (%s, %s)', (draft_year, name)
 
+    mysql_helper.insert_data(test)
+
+def remove_player():
+    mysql_helper = MySQLHelper.MySQLHelper()
+    cursor = mysql_helper.cursor
+
+    name = raw_input("\nEnter the player name you want to delete: ")
+    test = "DELETE FROM Player WHERE name LIKE %s", ("%" + name + "%",)
     mysql_helper.insert_data(test)

@@ -7,7 +7,6 @@
 # Import necessary libraries
 from libs import menu, db_info, view_team, view_player, teams, MySQLHelper, players, search, game
 
-mysql_helper = MySQLHelper.MySQLHelper()
 indicator = True
 inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -17,6 +16,8 @@ menu.printMenu()
 
 # While loop for menu and getting user input
 while indicator:
+
+    mysql_helper = MySQLHelper.MySQLHelper()
 
     operation = input("\nSelect an operation: ")
 
@@ -46,3 +47,4 @@ while indicator:
             search.nba_search()
 
         menu.printMenu()
+

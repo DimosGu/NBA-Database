@@ -2,10 +2,9 @@
 
 # Team options for the database #
 import MySQLHelper
-mysql_helper = MySQLHelper.MySQLHelper()
-cursor = mysql_helper.cursor
 
 def team_options():
+
 
     print_menu()
     indicator = True
@@ -44,7 +43,10 @@ def print_menu():
 
 
 def insert_team():
-    print("Enter Team Details:")
+    mysql_helper = MySQLHelper.MySQLHelper()
+    cursor = mysql_helper.cursor
+
+    print("INSERT TEAM HERE")
     name = raw_input("\nEnter team name: ")
     gm = raw_input("Enter general manager: ")
     coach = raw_input("Enter coach: ")
@@ -54,11 +56,13 @@ def insert_team():
 
     test = 'INSERT INTO Team (arena, coach, general_manager, record, team_name) ' \
            'VALUES (%s, %s, %s, %s, %s)', (arena, coach, gm, record, name)
-
     mysql_helper.insert_data(test)
 
 def remove_team():
-    team = raw_input("\nEnter the team name you want to delete: ")
-    test = "DELETE FROM Team WHERE team_name = '%s'", team
+    mysql_helper = MySQLHelper.MySQLHelper()
+    cursor = mysql_helper.cursor
 
+    team = raw_input("\nEnter the team name you want to delete: ")
+    test = "DELETE FROM Team WHERE team_name LIKE %s", ("%" + team + "%",)
     mysql_helper.insert_data(test)
+    test = "DELETE FROM Team WHERE team_name = '%s'", team

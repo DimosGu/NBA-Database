@@ -8,7 +8,6 @@ Operations
 - View list of all players
 - Add/Remove/Edit Team
 - Add/Remove/Edit Player
-- Add/Remove/Edit Game
 - Add Player Stats From Game
 - Search For A Team
 - Search For A Player
